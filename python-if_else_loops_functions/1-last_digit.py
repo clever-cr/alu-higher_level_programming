@@ -7,7 +7,7 @@ last_d = abs(number) % 10
 
 if number < 0:
 
-last_d *= (-1)
+    last_d *= (-1)
 
 if last_d > 5:
 
