@@ -1,5 +1,2 @@
-#!/bin/bash
-export PYFILE=main.py
-echo "Compiling $PYFILE ..."
-PYTHON3 -c $PYFILE
-
+#!/usr/bin/python3
+print("done all")
