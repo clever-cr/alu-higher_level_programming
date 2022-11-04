@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def multiple_retuns(sentence):
+def multiple_returns(sentence):
     if sentence:
         length = len(sentence)
         letter1 = sentence[0]
