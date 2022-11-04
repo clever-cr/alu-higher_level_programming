@@ -6,4 +6,5 @@ def multiple_retuns(sentence):
     else:
         length = 0
         letter1 = None
+
     return tuple((length, letter1))
