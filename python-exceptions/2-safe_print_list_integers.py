@@ -5,8 +5,8 @@ def safe_print_list_integers(my_list=[], x=0):
         try:
             number = my_list[n]
             print("{:d}".format(number), end="")
-            numbers += 1
-        except(TypeError, ValueError):
+            numbers = numbers + 1
+        except(ValueError, TypeError):
             continue
     print()
     return numbers
