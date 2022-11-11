@@ -5,7 +5,15 @@
 class Square:
     """ class Square"""
     def __init__(self, size=0):
-        """ private instance attribute"""
+        """init size"""
+        self.__size = size
+
+    def size(self):
+        "size attribute"
+        return self.__size
+
+    def size(self, size):
+        """ assigning"""
         self.__size = size
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
