@@ -16,7 +16,7 @@ class Rectangle:
         return self.__width
 
     @width.setter
-    def width(Self, value):
+    def width(self, value):
         """ sets width"""
         self.__width = value
         if not isinstance(value, int):
