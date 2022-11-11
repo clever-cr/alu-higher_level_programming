@@ -23,7 +23,7 @@ class Rectangle:
         """ sets width"""
         self.___width = value
         if not isinstance(value, int):
-            raise TypeErro("width must be an integer")
+            raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
 
