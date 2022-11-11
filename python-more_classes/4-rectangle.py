@@ -63,3 +63,10 @@ class Rectangle:
 
                 rectangle = rectangle + '\n'
             return rectangle[:-1]
+
+    def __repr__(self):
+        """
+        return a string representation of the rectangle
+        to be able to create new instance using eval()
+        """
+        return "Rectangle({}, {})".format(self.__width, self.__height)
