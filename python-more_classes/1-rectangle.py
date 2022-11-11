@@ -5,15 +5,12 @@
 class Rectangle:
 
     """class Rectangle"""
-    def __init__(self, width=0):
-        """initialize width"""
+    def __init__(self, width=0, heaight=0):
+        """initialize width and height"""
         self.width = width
-
-    def __init__(self, height=0):
-        """initialize height"""
         self.height = height
 
-    @property
+     @property
     def width(self):
         """"retrieve width"""
         return self.__width
