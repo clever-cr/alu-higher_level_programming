@@ -2,6 +2,12 @@
 
 >>> list1 = MyList()
 
+>>> list1
+[]
+
+>>> list1.print_sorted()
+[]
+
 >>> list1.append(4)
 
 >>> list1
