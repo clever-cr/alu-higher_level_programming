@@ -21,4 +21,4 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """provide rectangle"""
-        return str("[Rectangle] {}/{}".format(sef.__width, self.__height))
+        return str("[Rectangle] {}/{}".format(self.__width, self.__height))
