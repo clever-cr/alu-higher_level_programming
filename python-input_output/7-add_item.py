@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 """a script that adds all arguments to a Python
 list and save them to a file"""
 import sys
