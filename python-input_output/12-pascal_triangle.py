@@ -9,7 +9,7 @@ def pascal_triangle(n):
     answer = []
     for k in range(n):
         if k == 0:
-            result.append([1])
+            answer.append([1])
         else:
             ans = []
             list = answer[k - 1][:]
