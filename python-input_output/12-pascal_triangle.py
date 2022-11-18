@@ -17,7 +17,7 @@ def pascal_triangle(n):
             list.append(0)
             i = 0
             while i < len(list) - 1:
-                ans.append(list[i] + list + 1)
+                ans.append(list[i] + list[i + 1] )
                 i = i + 1
             answer.append(ans)
     return answer
