@@ -14,7 +14,7 @@ TypeError: a must be an integer
 >>> add_integer(12, True)
 Traceback (most recent call last):
 >>> add_integer(10, 20)
-20
+30
 >>> add_integer(12, 12.8)
 >>> add_integer(float('inf'))
 Traceback (most recent call last):
