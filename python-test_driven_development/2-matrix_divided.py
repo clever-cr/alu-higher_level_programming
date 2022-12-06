@@ -4,7 +4,7 @@
 
 def matrix_divided(matrix, div):
     """divides elments of matrix"""
-    if type div != float and type(div) != int:
+    if type(div) != float and type(div) != int:
         error1 = 'div must be a number'
         raise TypeError(error1)
     for i in matrix:
