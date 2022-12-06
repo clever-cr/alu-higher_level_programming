@@ -17,4 +17,4 @@ def matrix_divided(matrix, div):
         error3 = 'matrix must be a matrix (list of lists) of integers/floats'
         raise TypeError(error3)
     except ZeroDivisionError:
-        raise ZeroDivisionErro('division by zero')
+        raise ZeroDivisionError('division by zero')
