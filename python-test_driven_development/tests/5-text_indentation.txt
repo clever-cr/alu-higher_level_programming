@@ -1,0 +1,21 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+>>> text_indentation(23)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+>>> text_indentation('oyee:yeah.I got it')
+oyee:
+<BLANKLINE>
+yeah.
+<BLANKLINE>
+I got it
+>>> text_indentation('why?no . worry not')
+why?
+<BLANKLINE>
+no.
+<BLANKLINE>
+worry not
