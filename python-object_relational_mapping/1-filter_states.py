@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script that lists all states statrts N """
+"""script that lists all states statats N"""
 import sys
 import MySQLdb
 
