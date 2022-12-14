@@ -11,7 +11,7 @@ if __name__ == '__main__':
                             port=3306,
                             user=user,
                             code=password,
-                            database=my_db)
+                            my_db=database)
     cursor = my_db.cursor()
     cursor.execute("SELECT * FROM states ")
     states = cursor.fetchall()
