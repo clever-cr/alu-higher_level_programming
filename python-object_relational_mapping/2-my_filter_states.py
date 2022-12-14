@@ -16,7 +16,8 @@ if __name__ == '__main__':
         database=name
     )
     cursor = database.cursor()
-    cursor.execute("SELECT * FROM states WHERE BINARY name = {}".format(state))
+    cursor.execute("SELECT * FROM states WHERE BINARY \
+     name = '{}'".format(state))
     states = cursor.fetchall()
     for state in states:
         print(state)
