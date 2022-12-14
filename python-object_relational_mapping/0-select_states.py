@@ -14,7 +14,7 @@ if __name__ == '__main__':
         password=password,
         database=name
     )
-    cursor = my_db.cursor()
+    cursor = database.cursor()
     cursor.execute("SELECT * FROM states ")
     states = cursor.fetchall()
     for state in states:
