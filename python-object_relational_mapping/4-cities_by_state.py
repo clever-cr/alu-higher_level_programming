@@ -16,7 +16,7 @@ if __name__ == '__main__':
     )
     cursor = database.cursor()
     cursor.execute("SELECT cities.id, cities.name, states.name FROM states, \
-     cities WHERE citie.s_id = states.id ORDER BY cities.id ASC")
+     cities WHERE citie.state_id = states.id ORDER BY cities.id ASC")
     cities = cursor.fetchall()
     for city in cities:
         print(city)
