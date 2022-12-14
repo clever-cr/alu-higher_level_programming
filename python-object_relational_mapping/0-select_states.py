@@ -7,11 +7,13 @@ if __name__ == '__main__':
     user = sys.argv[1]
     password = sys.argv[2]
     name = sys.argv[3]
-    database = MySQLdb.connect(host='localhost',
-                            port=3306,
-                            user=user,
-                            code=password,
-                            database=name)
+    database = MySQLdb.connect(
+        host='localhost',
+        port=3306,
+        user=user,
+        password=password,
+        database=name
+    )
     cursor = my_db.cursor()
     cursor.execute("SELECT * FROM states ")
     states = cursor.fetchall()
