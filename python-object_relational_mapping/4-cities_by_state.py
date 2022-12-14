@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script that displays all values in the states table """
+"""script that lists all cities from database by state"""
 import sys
 import MySQLdb
 
@@ -16,8 +16,8 @@ if __name__ == '__main__':
         database=name
     )
     cursor = database.cursor()
-    cursor.execute(f"SELECT * FROM states WHERE BINARY \
-    name = {state}")
-    states = cursor.fetchall()
-    for state in states:
-        print(state)
+    cursor.execute("SELECT cities.id, cities.name, states.name FROM states, \
+     cities WHERE citie.s_id = states.id ORDER BY cities.id ASC")
+    cities = cursor.fetchall()
+    for city in cities:
+        print(city)
