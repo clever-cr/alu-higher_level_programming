@@ -15,8 +15,8 @@ if __name__ == "__main__":
                         password,
                         name),
                         pool_pre_ping=True)
-    ssn = sessionmaker(bind=eng)
     Base.metadata.create_all(eng)
+    ssn = sessionmaker(bind=eng)
     session = ssn()
     for state in session.query(State).order_by(State.id).all():
         print("{}: {}".format(state.id, state.name))
