@@ -1,14 +1,18 @@
 #!/usr/bin/python3
-"""class State and instance base"""
+"""scripts that lists all state from database  hbtn_0e_6_usa"""
 
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declalarative import declarative_base
+from model_state import Base, State
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine
+import sys
 
-Base = declarative_base()
-
-
-class State(Base):
-    """instance Base"""
-    __tablename__ = 'states'
-    id = Column(Integer, primary_key=True)
-    name = Column(String(128), nullable=False)
+if __name__ == "__main__":
+    user = sys.argv[1]
+    password = sys.argv[2]
+    name = sys.argv[3]
+    eng = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.formart(user, password, name), pool_pre_ping=True)
+    ssn = sessionmaker(bind=eng)
+    Base.metadata.create_all(eng)
+    session = ssn()
+    for state in session.query(State).order_by(State.id).all():
+        print("{}: {}".format(state.id, state.name))
