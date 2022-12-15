@@ -10,7 +10,11 @@ if __name__ == "__main__":
     user = sys.argv[1]
     password = sys.argv[2]
     name = sys.argv[3]
-    eng = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.formart(user, password, name), pool_pre_ping=True)
+    eng = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.formart(
+                        user,
+                        password,
+                        name),
+                        pool_pre_ping=True)
     ssn = sessionmaker(bind=eng)
     Base.metadata.create_all(eng)
     session = ssn()
