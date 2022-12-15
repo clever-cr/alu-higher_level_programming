@@ -18,7 +18,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(eng)
     ssn = sessionmaker(bind=eng)
     session = ssn()
-    if session.query(State).order_by(State.id).first():
-        print(f"{State.id}: {State.name}")
+    s = session.query(State).order_by(State.id).first()
+    if s:
+        print(f"{s.id}: {s.name}")
     else:
         print('Nothing')

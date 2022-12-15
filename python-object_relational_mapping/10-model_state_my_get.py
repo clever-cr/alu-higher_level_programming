@@ -1,5 +1,5 @@
-#!/usr/bin/python3
-"""lists all states contains letter a"""
+#!/usr/bin/pyhton3
+"""prints the State object with the name passed as argument"""
 
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
@@ -10,6 +10,7 @@ if __name__ == "__main__":
     user = sys.argv[1]
     password = sys.argv[2]
     name = sys.argv[3]
+    s_name = sys.argv[4]
     eng = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
                         user,
                         password,
@@ -18,7 +19,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(eng)
     ssn = sessionmaker(bind=eng)
     session = ssn()
-    states = session.query(State)\
-        .filter(State.name.like('%a%')).order_by(State.id).all()
-    for state in states:
-        print(f"{states.id}: {states.name}")
+    s = session.querry(State).filter(State.name == s_name).first() 
+    if s is None:
+        print("Not found")
+    else:
+        print("{}".format(s.id))
