@@ -19,7 +19,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(eng)
     ssn = sessionmaker(bind=eng)
     session = ssn()
-    s = session.querry(State).filter(State.name == s_name).first() 
+    s = session.query(State).filter(State.name == s_name).first()
     if s is None:
         print("Not found")
     else:
