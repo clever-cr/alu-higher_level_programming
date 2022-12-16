@@ -10,7 +10,6 @@ if __name__ == "__main__":
     user = sys.argv[1]
     password = sys.argv[2]
     name = sys.argv[3]
-    s_name = sys.argv[4]
     eng = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
                         user,
                         password,
