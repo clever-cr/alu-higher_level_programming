@@ -61,3 +61,13 @@ class Square(Rectangle):
     def to_dictionary(self):
         """dictionary representation"""
         return {"id": self.id, "size": self.size, "x":self.x, "y":self.y}
+
+    @classmethod
+    def load_from_file(cls):
+        """list of instances"""
+        try:
+            with open(cls.__name__ + '.json') as f:
+                txt = f.read()
+                return [cls.create(**i) for i in cls.from_json_string(txt)]
+        except FileNotFoundError:
+            return []
