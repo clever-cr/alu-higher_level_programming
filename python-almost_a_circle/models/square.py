@@ -15,7 +15,7 @@ class Square(Rectangle):
     def size(self):
         """return size"""
         return self.width
-    
+
     @size.setter
     def size(self, value):
         """set size"""
@@ -24,7 +24,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """string representation"""
-        return ("[Square] ({}) {}/{} - {}".format(self.id, self.x,self.y,self.size))
+        return ("[Square] ({}) {}/{} - {}"
+                .format(self.id, self.x, self.y, self.size))
 
     def update(self, *args, **kwargs):
         """update class square"""
@@ -55,7 +56,7 @@ class Square(Rectangle):
 
             if "y" in kwargs:
                 self.y = kwargs["y"]
-    
+
     def to_dictionary(self):
         """dictionary representation"""
-        return {"id": self.id, "size": self.size, "x":self.x, "y":self.y}
+        return {"id": self.id, "size": self.size, "x": self.x, "y": self.y}
