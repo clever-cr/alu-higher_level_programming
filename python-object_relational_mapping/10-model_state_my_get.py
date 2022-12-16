@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/pyhthon3
 """prints the State object with the name passed as argument"""
 
 from sqlalchemy.orm import sessionmaker
