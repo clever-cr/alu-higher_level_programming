@@ -48,3 +48,13 @@ class Base:
             size = cls(2)
         size.update(**dictionary)
         return size
+
+    @classmethod
+    def load_from_file(cls):
+        """list of instances"""
+        try:
+            with open(cls.__name__ + '.json') as f:
+                txt = f.read()
+                return [cls.create(**i) for i in cls.from_json_string(txt)]
+        except FileNotFoundError:
+            return []
