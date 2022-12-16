@@ -17,6 +17,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(eng)
     ssn = sessionmaker(bind=eng)
     session = ssn()
-    new_state = State(name="Lousiana")
+    new_state = State(name="Louisiana")
     session.add(new_state)
     print(new_state.id)
