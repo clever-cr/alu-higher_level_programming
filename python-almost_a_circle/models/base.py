@@ -39,6 +39,7 @@ class Base:
             return []
         return json.loads(json_string)
 
+    @classmethod
     def create(cls, **dictionary):
         """class instance"""
         if cls.__name__ == 'Rectangle':
