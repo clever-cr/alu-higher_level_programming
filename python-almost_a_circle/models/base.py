@@ -38,3 +38,12 @@ class Base:
         if json_string is None:
             return []
         return json.loads(json_string)
+
+    def create(cls, **dictionary):
+        """class instance"""
+        if cls.__name__ == 'Rectangle':
+            size = cls(4,2)
+        else:
+            size = cls(2)
+        size.update(**dictionary)
+        return size
