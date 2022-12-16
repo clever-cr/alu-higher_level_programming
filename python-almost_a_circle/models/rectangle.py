@@ -87,11 +87,12 @@ class Rectangle(Base):
 
     def __str__(self):
         """returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
-        return(f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}")
-    
+        return(f"[Rectangle] ({self.id}) \
+            {self.x}/{self.y} - {self.width}/{self.height}")
+
     def update(self, *args, **kwargs):
         """ assigns an argument to each attribute"""
-        try:   
+        try:
             if type(args) == tuple and len(args) > 0:
                 self.id = args[0]
                 self.width = args[1]
@@ -120,7 +121,9 @@ class Rectangle(Base):
             except Exception:
                 pass
         except Exception:
-                pass
+            pass
+
     def to_dictionary(self):
         """dictionary representation"""
-        return{"id":self.id, "width":self.width, "height":self.height, "x":self.x, "y":self.y}
+        return{"id": self.id, "width": self.width,
+               "height": self.height, "x": self.x, "y": self.y}
