@@ -44,7 +44,7 @@ class Base:
     def create(cls, **dictionary):
         """class instance"""
         if cls.__name__ == 'Rectangle':
-            size = cls(4,2)
+            size = cls(4, 2)
         else:
             size = cls(2)
         size.update(**dictionary)
