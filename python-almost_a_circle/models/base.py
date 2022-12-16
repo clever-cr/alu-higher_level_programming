@@ -5,7 +5,6 @@ import json
 import csv
 
 
-
 class Base:
     """class base"""
     __nb_objects = 0
