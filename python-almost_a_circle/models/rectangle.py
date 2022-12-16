@@ -89,4 +89,35 @@ class Rectangle(Base):
         """returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
         return(f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}")
     
-    
+    def update(self, *args, **kwargs):
+        """ assigns an argument to each attribute"""
+        try:   
+            if type(args) == tuple and len(args) > 0:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
+                return
+            try:
+                self.id = kwargs['id']
+            except Exception:
+                pass
+            try:
+                self.width = kwargs.get('width')
+            except Exception:
+                pass
+            try:
+                self.height = kwargs.get('height')
+            except Exception:
+                pass
+            try:
+                self.x = kwargs.get('x')
+            except Exception:
+                pass
+            try:
+                self.y = kwargs.get('y')
+            except Exception:
+                pass
+        except Exception:
+                pass
