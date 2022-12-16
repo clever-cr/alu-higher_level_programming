@@ -31,7 +31,7 @@ class Base:
         dictionary_list = None
         if list_objs is not None:
             dictionary_list = [i.to_dictionary() for i in list_objs]
-        with open(cls.__name__ + 'json', 'w', encoding='utf-8') as f:
+        with open(cls.__name__ + '.json', 'w', encoding='utf-8') as f:
             f.write(Base.to_json_string(dictionary_list))
 
     def from_json_string(json_string):
