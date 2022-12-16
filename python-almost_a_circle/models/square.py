@@ -54,3 +54,6 @@ class Square(Rectangle):
         except Exception:
             pass
     
+    def to_dictionary(self):
+        """dictionary representation"""
+        return {"id": self.id, "size": self.size, "x":self.x, "y":self.y}
