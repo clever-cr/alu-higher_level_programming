@@ -27,7 +27,7 @@ class Base:
 
     def save_to_file(cls, list_objs):
         """save to file"""
-        dictionary_list = []
+        dictionary_list = None
         if list_objs is not None:
             dictionary_list = [i.to_dictionary() for i in list_objs]
         with open(cls.__name__ + 'json', 'w', encoding='utf-8') as f:
