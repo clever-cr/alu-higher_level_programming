@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""script that adds the State object “Louisiana” to the database """
+"""a script that changes the name of a State object from the database """
+
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 from sqlalchemy import create_engine
@@ -9,6 +10,7 @@ if __name__ == "__main__":
     user = sys.argv[1]
     password = sys.argv[2]
     name = sys.argv[3]
+    s_name = sys.argv[4]
     eng = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
                         user,
                         password,
@@ -17,6 +19,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(eng)
     ssn = sessionmaker(bind=eng)
     session = ssn()
-    new_state = State(name="Lousiana")
-    session.add(new_state)
-    print(new_state.id)
+    state = session.query(State).filter_by(id=2).first
+    sname = 'New Mexico'
+    session.commit()
