@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""lists all states contains letter a"""
+"""script that adds the State object “Louisiana” to the database """
 
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
@@ -15,10 +15,9 @@ if __name__ == "__main__":
                         password,
                         name),
                         pool_pre_ping=True)
-    Base.metadata.create_all(eng)
-    ssn = sessionmaker(bind=eng)
-    session = ssn()
-    states = session.query(State)\
-        .filter(State.name.like('%a%')).order_by(State.id).all()
-    for state in states:
-        print(f"{states.id}: {states.name}")
+Base.metadata.create_all(eng)
+ssn = sessionmaker(bind=eng)
+session = ssn()
+new_state = State(name="Lousiana")
+session.add(new_state)
+print(new_state.id)
