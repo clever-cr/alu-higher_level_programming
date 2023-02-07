@@ -1,7 +1,7 @@
 #!/usr/bin/node
-function add() {
-    let num1 
-    let num2
-return num1+num2
-}
-add()
+
+function Add (num1,num2){
+  
+    return num1+num2
+    }
+  module.export = {Add}
