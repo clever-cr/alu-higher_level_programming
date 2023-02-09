@@ -1,6 +1,6 @@
 #!/usr/bin/node
-const argument = process.argv[2];
-if (argument === undefined) {
+const argument = parseInt(process.argv[2]);
+if (isNaN(argument)) {
     console.log('Missing size')
 }
 for (let i = 0; i < argument; i++) {
