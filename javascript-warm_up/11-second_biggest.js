@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const arguments = process.argv[2]
+const arguments = process.argv.slice(2);
 if (arguments.length <= 1) {
     console.log(0);
 } else {
